@@ -6,17 +6,17 @@
 	<title>@yield('title')</title>
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/OverlayScrollbars.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}" rel="stylesheet">
+	<link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/OverlayScrollbars.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 @yield('contenido')
 <div class="wrapper">
 
 
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
 
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -83,4 +83,3 @@
 <script src="{{ asset('js/main.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/funciones.js') }}" type="text/javascript"></script>
 </html>
-

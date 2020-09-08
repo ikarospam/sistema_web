@@ -18,33 +18,43 @@
 
 <style type="text/css" media="screen">
   ion-icon {
-  font-size: 26px;
+    font-size: 26px;
 }
 
 </style>
 <div class="container">
   <div class="row justify-content-md-center">
-
+    <form method="POST" action="{{ route('login') }}">
+    @csrf
     <div class="col-md-auto">
-      <form>
   <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1"><ion-icon name="person-circle-sharp"></ion-icon></span>
   </div>
-  <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1">
+  <input id="usuario" type="text" name="usuario" class="form-control @error('usuario') is-invalid @enderror" placeholder="Usuario"  value="{{ old('usuario') }}" aria-label="Username" aria-describedby="basic-addon1">
+  @error('usuario')
+      <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+      </span>
+  @enderror
 </div>
   <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1"><ion-icon name="key-sharp"></ion-icon></span>
   </div>
-  <input type="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+  <input id="password" type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Contraseña" value="{{ old('password') }}" aria-label="Username" aria-describedby="basic-addon1">
+  @error('password')
+      <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+      </span>
+  @enderror
 </div>
 <!--   <div class="form-group form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div> -->
  <!--  <button type="submit" class="btn btn-primary">Submit</button> -->
-  <a href="menu.php" class="btn btn-primary">Iniciar</a>
+ <button type="submit" class="btn btn-primary">Iniciar</button>
 </form>
     </div>
   

@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*Route::get('/', function () {
+    return view('sistema.sesion');
+});*/
 
 Route::get('/sesion', function () {
     return view('sistema.sesion');
@@ -22,9 +22,13 @@ Route::get('/sesion', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'IndexController@index')->name('index');;
 
 
-Route::get('/sistema/inicio', 'PanelController@penel');
-Route::get('/sistema/cliente/nuevo_cliente', 'ClientesController@nuevo');
-Route::get('/sistema/cliente/lista_cliente', 'ClientesController@lista');
+Route::get('/sistema/inicio', 'PanelController@penel')->name('inicio');
+Route::get('/sistema/cliente/nuevo_cliente', 'ClientesController@nuevo')->name('nuevo.cliente');
+Route::get('/sistema/cliente/lista_cliente', 'ClientesController@lista')->name('lista.cliente');
 
+//Inmuebles
+
+Route::get('/sistema/inmueble/lista_inmueble', 'InmubleController@lista')->name('lista.inmueble');
